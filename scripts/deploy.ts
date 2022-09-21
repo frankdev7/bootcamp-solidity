@@ -2,12 +2,12 @@ import { ethers } from "hardhat";
 
 async function main() {
 
-  const DataStructure = await ethers.getContractFactory("DataStructure");
-  const dataStructure = await DataStructure.deploy();
+  const Contract = await ethers.getContractFactory("ReceiveFallback");
+  const contractInstance = await Contract.deploy();
 
-  await dataStructure.deployed();
+  await contractInstance.deployed();
 
-  console.log(`DataStructure deployed to ${dataStructure.address}`);
+  console.log(`Smart Contract deployed to ${contractInstance.address}`);
 }
 
 // We recommend this pattern to be able to use async/await everywhere
