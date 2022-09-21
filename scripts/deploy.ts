@@ -2,7 +2,7 @@ import { ethers } from "hardhat";
 
 async function main() {
 
-  const Contract = await ethers.getContractFactory("ReceiveFallback");
+  const Contract = await ethers.getContractFactory("Hamburger");
   const contractInstance = await Contract.deploy();
 
   await contractInstance.deployed();
